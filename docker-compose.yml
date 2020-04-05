@@ -1,0 +1,7 @@
+version: '3'
+services:
+  webapp:
+    container_name: wakacje
+    build: .
+    ports:
+      - "8000:80"
