@@ -32,7 +32,7 @@ const Container = styled.div`
 `;
 
 const Palm = styled.img`
-  margin-top: 2rem;
+  margin-top: 1rem;
 `;
 
 const Footer = styled.footer`
