@@ -9,7 +9,7 @@ const Summary = ({ days, hours, minutes, seconds, ...props }) => {
       <Serif $as="div" fontSize={1} fontWeight={800}>
         {days} dni {hours} godzin {minutes} minut {seconds} sekund
       </Serif>
-      <Text $as="div" fontSize={1} letterSpacing={0.15} textTransform={'uppercase'}>pozostało</Text>
+      <Text $as="div" fontSize={0.75} letterSpacing={0.15} textTransform={'uppercase'}>pozostało</Text>
     </p>
   );
 };

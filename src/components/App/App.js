@@ -5,18 +5,30 @@ import Heading from '../Heading';
 import Countdown from '../Countdown';
 import palm from '../../img/palm.svg';
 import Handwriting from '../Typography/Handwriting/Handwriting';
+import { currentTheme, device } from '../../utils/Theme';
+import background from '../../img/background.png';
 
 const StyledApp = styled.div`
-  align-items: center;
+  background-color: ${currentTheme.backgroundColor};
+  color: ${currentTheme.textColor};
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  width: ${4 / 6 * 100}%;
+
+  @media ${device.laptop} {
+    background: url(${background});
+  }
 `;
 
 const Container = styled.div`
   text-align: center;
+  width: 100%;
+  z-index: 1;
+  
+  @media ${device.laptop} {
+    width: ${4 / 6 * 100}%;
+  }
 `;
 
 const Palm = styled.img`
@@ -25,8 +37,10 @@ const Palm = styled.img`
 
 const Footer = styled.footer`
   bottom: 16px;
+  font-size: calc(.5em + 8px);
   left: 18px;
   position: absolute;
+  z-index: 1;
 `;
 
 function App () {
@@ -43,7 +57,7 @@ function App () {
       </Container>
       <Footer>
         <Handwriting letterSpacing={0.15}>
-          by romanowski.me
+          crafted with &lt;3 by romanowski.me
         </Handwriting>
       </Footer>
       <BackgroundShapes />

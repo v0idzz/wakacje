@@ -3,15 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 body {
-  background-color: #B0D6AE;
-  color: white;
   margin: 0;
   font-family: 'Oxygen', sans-serif;
   font-size: calc(1em + 1vw);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media only screen and (min-width: 992px) {
-    background: url('./img/background.png');
-  }
 }

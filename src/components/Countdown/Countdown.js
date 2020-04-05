@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import moment from 'moment';
 import 'moment-business-days';
 import { SchoolStart, VacationStart } from '../../utils/Config';
-import Percentage from './PercentageCountdown';
+import Percentage from './Percentage';
 import Summary from './Summary';
 
 const Countdown = () => {

@@ -5,7 +5,7 @@ import Text from '../../Typography/Text';
 import PropTypes from 'prop-types';
 
 const Component = styled.p`
-  margin: 0;
+  margin-top: 0;
 `;
 
 const Percentage = ({ percentage, ...props }) => (

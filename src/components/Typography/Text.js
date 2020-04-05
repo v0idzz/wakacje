@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { currentTheme } from '../../utils/Theme';
 
 const Component = styled.div`
+  color: ${props => props.color};
   font-family: ${props => props.fontFamily};
   font-size: ${props => props.fontSize}em;
   font-weight: ${props => props.fontWeight};
@@ -23,6 +25,7 @@ const Text = ({
 };
 
 Text.defaultProps = {
+  color: currentTheme.textColor,
   fontFamily: '\'Oxygen\', sans-serif',
   fontSize: 1,
   fontWeight: 100,
@@ -32,6 +35,7 @@ Text.defaultProps = {
 
 Text.propTypes = {
   $as: PropTypes.string,
+  color: PropTypes.string,
   fontFamily: PropTypes.string,
   fontSize: PropTypes.number,
   fontWeight: PropTypes.number,
