@@ -1,7 +1,9 @@
 export const themes = {
   default: {
     textColor: '#ffffff',
-    backgroundColor: '#b0d6ae'
+    backgroundColor: '#b0d6ae',
+    linkColor: '#ffffff',
+    linkDecorations: 'none'
   }
 };
 

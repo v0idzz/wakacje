@@ -1,3 +1,5 @@
+export const authorWebsite = 'https://romanowski.me/';
+
 export const VacationStart = '27-06-2020';
 export const SchoolStart = '02-09-2019';
 

@@ -7,6 +7,8 @@ import palm from '../../img/palm.svg';
 import Handwriting from '../Typography/Handwriting/Handwriting';
 import { currentTheme, device } from '../../utils/Theme';
 import background from '../../img/background.png';
+import Link from '../Link';
+import { authorWebsite } from '../../utils/Config';
 
 const StyledApp = styled.div`
   background-color: ${currentTheme.backgroundColor};
@@ -56,9 +58,11 @@ function App () {
         </main>
       </Container>
       <Footer>
-        <Handwriting letterSpacing={0.15}>
+        <Link to={authorWebsite}>
+          <Handwriting letterSpacing={0.15}>
           crafted with &lt;3 by romanowski.me
-        </Handwriting>
+          </Handwriting>
+        </Link>
       </Footer>
       <BackgroundShapes />
     </StyledApp>
