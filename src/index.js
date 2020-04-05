@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.scss';
 import * as serviceWorker from './serviceWorker';
+import App from './components/App';
+import moment from 'moment';
+import { Holidays } from './utils/Config';
+
+moment.updateLocale('pl', {
+  holidays: Holidays.map(o => o.date),
+  holidaysFormat: 'DD-MM-YYYY'
+});
+moment.locale('pl-PL');
 
 ReactDOM.render(
   <React.StrictMode>
