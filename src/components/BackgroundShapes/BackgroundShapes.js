@@ -1,13 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../../utils/Theme';
 
 const Component = styled.div`
   bottom: 0;
+  display: none;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 0;
+
+  @media ${device.laptop} {
+    display: block;
+  }
 `;
 
 const BottomShape = styled.svg`
