@@ -17,8 +17,8 @@ const Input = styled.input`
 const darkerBgColor = darken(0.1, currentTheme.backgroundColor);
 
 const Slide = styled.div`
-  background-color: ${darkerBgColor};
-  border: 2px solid ${darkerBgColor};
+  background-color: ${currentTheme.textColor};
+  border: 2px solid ${currentTheme.textColor};
   border-radius: 45px;
   display: inline-block;
   height: 40px;
@@ -27,13 +27,13 @@ const Slide = styled.div`
   width: 75px;
 
   ${Input}:checked ~ & {
-    background-color: ${currentTheme.textColor};
-    border-color: ${currentTheme.textColor};
+    background-color: ${darkerBgColor};
+    border-color: ${darkerBgColor};
   }
 `;
 
 const Thumb = styled.div`
-  background-color: ${currentTheme.textColor};
+  background-color: ${darkerBgColor};
   border-radius: 50%;
   display: block;
   height: 40px;
@@ -41,7 +41,7 @@ const Thumb = styled.div`
   width: 40px;
 
   ${Input}:checked ~ ${Slide} > & {
-    background-color: ${darkerBgColor};
+    background-color: ${currentTheme.textColor};
     margin-left: calc(50% - 3px);
   }
 `;
