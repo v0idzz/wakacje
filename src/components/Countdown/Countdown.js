@@ -32,7 +32,7 @@ const Countdown = () => {
     const vacationStart = moment(VacationStart, 'DD-MM-YYYY');
     const schoolStart = moment(SchoolStart, 'DD-MM-YYYY');
 
-    const totalDays = skipDaysOff ? vacationStart.businessDiff(schoolStart) : vacationStart.diff(schoolStart, 'days');
+    const totalDays = vacationStart.diff(schoolStart, 'days');
     const daysLeft = skipDaysOff ? vacationStart.businessDiff(now) : vacationStart.diff(now, 'days');
 
     const percentage = 100 - (daysLeft / totalDays * 100);
