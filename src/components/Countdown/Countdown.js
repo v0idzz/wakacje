@@ -1,9 +1,18 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import moment from 'moment';
 import 'moment-business-days';
 import { SchoolStart, VacationStart } from '../../utils/Config';
 import Percentage from './Percentage';
 import Summary from './Summary';
+import Switch from '../Switch';
+import styled from 'styled-components';
+import Text from '../Typography/Text';
+import useInterval from '@use-it/interval';
+
+const SwitchContainer = styled.div`
+  justify-content: center;
+  display: flex;
+`;
 
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -13,10 +22,9 @@ const Countdown = () => {
     seconds: 0,
     percentage: 0
   });
-
   const [skipDaysOff, setSkipDaysOff] = useState(false);
 
-  setInterval(() => {
+  useInterval(() => {
     const now = moment();
     const unix = now.unix();
     const diff = now.add(1, 'days').startOf('day').unix() - unix;
@@ -39,10 +47,17 @@ const Countdown = () => {
     });
   }, 1000);
 
+  const handleSkipDaysOffChange = e => setSkipDaysOff(e.target.checked);
+
   return (
     <Fragment>
       <Percentage percentage={timeLeft.percentage} />
       <Summary seconds={timeLeft.seconds} days={timeLeft.days} minutes={timeLeft.minutes} hours={timeLeft.hours} />
+      <SwitchContainer>
+        <Switch checked={skipDaysOff} onChange={handleSkipDaysOffChange}>
+          <Text font-size={0.1} textTransform={'uppercase'} letterSpacing={0.15}>Pomiń dni wolne</Text>
+        </Switch>
+      </SwitchContainer>
     </Fragment>
   );
 };
