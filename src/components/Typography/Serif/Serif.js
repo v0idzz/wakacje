@@ -11,7 +11,7 @@ const Serif = ({ children, ...props }) => {
 };
 
 Serif.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default Serif;

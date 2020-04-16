@@ -10,7 +10,7 @@ const Handwriting = props => {
 };
 
 Handwriting.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default Handwriting;

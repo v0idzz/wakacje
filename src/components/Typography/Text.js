@@ -41,7 +41,7 @@ Text.propTypes = {
   fontWeight: PropTypes.number,
   letterSpacing: PropTypes.number,
   textTransform: PropTypes.oneOf(['none', 'capitalize', 'uppercase', 'lowercase', 'initial', 'inherit']),
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default Text;
