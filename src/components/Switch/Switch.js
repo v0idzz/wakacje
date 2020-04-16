@@ -20,6 +20,7 @@ const Slide = styled.div`
   background-color: ${currentTheme.textColor};
   border: 2px solid ${currentTheme.textColor};
   border-radius: 45px;
+  cursor: pointer;
   display: inline-block;
   height: 40px;
   margin: 0 0.5em;
