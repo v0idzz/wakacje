@@ -59,8 +59,8 @@ function App () {
       </Container>
       <Footer>
         <Link to={authorWebsite}>
-          <Handwriting letterSpacing={0.15}>
-          crafted with &lt;3 by romanowski.me
+          <Handwriting fontSize={0.8} letterSpacing={0.15}>
+          &lt;/&gt; with &lt;3 by romanowski.me
           </Handwriting>
         </Link>
       </Footer>
