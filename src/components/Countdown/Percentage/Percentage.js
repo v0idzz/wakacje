@@ -10,8 +10,9 @@ const Component = styled.p`
 
 const Percentage = ({ percentage, ...props }) => (
   <Component {...props}>
-    <Serif $as="div" fontSize={4} letterSpacing={0.15}>{percentage.toFixed(2)}%</Serif>
-    <Text $as="div" fontSize={0.75} letterSpacing={0.15} textTransform={'uppercase'}>za nami</Text>
+    <Serif $as="span" fontSize={4} letterSpacing={0.15}>{percentage.toFixed(2)}%</Serif>
+    <br/>
+    <Text $as="span" fontSize={0.75} letterSpacing={0.15} textTransform={'uppercase'}>za nami</Text>
   </Component>
 );
 
