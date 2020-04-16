@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { currentTheme } from '../../utils/Theme';
 
 const Component = styled.a`
+  color: ${currentTheme.textColor};
   text-decoration: ${currentTheme.linkDecorations};
 `;
 

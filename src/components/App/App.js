@@ -9,6 +9,7 @@ import { currentTheme, device } from '../../utils/Theme';
 import background from '../../img/background.png';
 import Link from '../Link';
 import { authorWebsite } from '../../utils/Config';
+import Footer from '../Footer';
 
 const StyledApp = styled.div`
   background-color: ${currentTheme.backgroundColor};
@@ -37,14 +38,6 @@ const Palm = styled.img`
   margin-top: 1rem;
 `;
 
-const Footer = styled.footer`
-  bottom: 16px;
-  font-size: calc(.5em + 8px);
-  left: 18px;
-  position: absolute;
-  z-index: 1;
-`;
-
 function App () {
   return (
     <StyledApp>
@@ -57,13 +50,7 @@ function App () {
           <Countdown/>
         </main>
       </Container>
-      <Footer>
-        <Link to={authorWebsite}>
-          <Handwriting fontSize={0.8} letterSpacing={0.15}>
-          &lt;/&gt; with &lt;3 by romanowski.me
-          </Handwriting>
-        </Link>
-      </Footer>
+      <Footer/>
       <BackgroundShapes />
     </StyledApp>
   );
