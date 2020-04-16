@@ -4,11 +4,8 @@ import styled from 'styled-components';
 import Heading from '../Heading';
 import Countdown from '../Countdown';
 import palm from '../../img/palm.svg';
-import Handwriting from '../Typography/Handwriting/Handwriting';
 import { currentTheme, device } from '../../utils/Theme';
 import background from '../../img/background.png';
-import Link from '../Link';
-import { authorWebsite } from '../../utils/Config';
 import Footer from '../Footer';
 
 const StyledApp = styled.div`
