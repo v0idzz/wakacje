@@ -42,7 +42,7 @@ const Footer = (props) => {
   return (
     <FooterComponent {...props}>
       <Handwriting fontSize={0.8} letterSpacing={0.15}>
-        <Link to="https://gitlab.com/v0idzz/wakacje">&lt;/&gt;</Link>&nbsp;
+        <Link to="https://github.com/v0idzz/wakacje">&lt;/&gt;</Link>&nbsp;
         with &lt;3 by&nbsp;
         <Link to={authorWebsite}>romanowski.me</Link> &sdot;&nbsp;
         <CreditsButton onClick={handleCreditsClick}>credits</CreditsButton>
