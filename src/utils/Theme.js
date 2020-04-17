@@ -2,6 +2,7 @@ export const themes = {
   default: {
     textColor: '#ffffff',
     backgroundColor: '#b0d6ae',
+    secondaryColor: '#ffcf99',
     linkColor: '#ffffff',
     linkDecorations: 'none'
   }

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { authorWebsite } from '../../utils/Config';
 import Handwriting from '../Typography/Handwriting/Handwriting';
 import Link from '../Link';
+import Modal from '../Modal/Modal';
+import Text from '../Typography/Text';
 
 const FooterComponent = styled.footer`
   bottom: 16px;
@@ -12,12 +14,38 @@ const FooterComponent = styled.footer`
   z-index: 1;
 `;
 
+const List = styled(Text)`
+  list-style: none;
+`;
+
+const ListItem = styled.li`
+  line-height: 1.5;
+`;
+
 const Footer = (props) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleCreditsClick = () => setShowModal(!showModal);
+  const handleModalClose = () => setShowModal(false);
+
   return (
     <FooterComponent {...props}>
       <Handwriting fontSize={0.8} letterSpacing={0.15}>
-          &lt;/&gt; with &lt;3 by <Link to={authorWebsite}>romanowski.me</Link>
+          &lt;/&gt; with &lt;3 by <Link to={authorWebsite}>romanowski.me</Link> &sdot;&nbsp;
+        <span onClick={handleCreditsClick}>credits</span>
       </Handwriting>
+
+      <Modal show={showModal} onClick={handleModalClose}>
+        <Modal.Title>
+          credits
+        </Modal.Title>
+        <Modal.Content>
+          <List $as="ul" letterSpacing={0.15}>
+            <ListItem>icons by <Link to="https://www.flaticon.com/authors/freepik">freepik</Link></ListItem>
+            <ListItem>images by <Link to="https://pixabay.com/">pixabay.com</Link></ListItem>
+          </List>
+        </Modal.Content>
+      </Modal>
     </FooterComponent>);
 };
 
