@@ -14,6 +14,17 @@ const FooterComponent = styled.footer`
   z-index: 1;
 `;
 
+const CreditsButton = styled.button`
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  outline: none;
+  padding: 0;
+  text-decoration: underline;
+`;
+
 const List = styled(Text)`
   list-style: none;
 `;
@@ -32,7 +43,7 @@ const Footer = (props) => {
     <FooterComponent {...props}>
       <Handwriting fontSize={0.8} letterSpacing={0.15}>
           &lt;/&gt; with &lt;3 by <Link to={authorWebsite}>romanowski.me</Link> &sdot;&nbsp;
-        <span onClick={handleCreditsClick}>credits</span>
+        <CreditsButton onClick={handleCreditsClick}>credits</CreditsButton>
       </Handwriting>
 
       <Modal show={showModal} onClick={handleModalClose}>
