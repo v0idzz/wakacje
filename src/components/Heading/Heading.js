@@ -14,7 +14,7 @@ const Heading = () => {
         Odliczanie do
       </Text><br/>
       <Handwriting as="span" letterSpacing={0.05} fontSize={2.5} className="countdown__headingSummer">
-        wakacji 2020
+        wakacji 2021
       </Handwriting>
     </Header>
   );
